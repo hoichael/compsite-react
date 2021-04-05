@@ -2,7 +2,7 @@
 
 function NumGuessHistory( { goTo } ) {
 
-    const historyArr = JSON.parse(localStorage.getItem("numGuess")).reverse();
+    const historyArr = JSON.parse(localStorage.getItem("numGuess"));
 
     function genDataEntries() {
 
@@ -15,7 +15,7 @@ function NumGuessHistory( { goTo } ) {
             )
         }
 
-        return historyArr.map(element => (
+        return historyArr.reverse().map(element => (
             <div key={Math.random() + Math.random() + Math.random()} className="numguess-data-entry">
                 <div>Date: {element.date}</div>
                 <div>Difficulty: {element.difficulty}</div>
