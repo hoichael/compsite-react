@@ -1,0 +1,977 @@
+body {
+  margin: 0;
+/*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+/*
+    font-family: 'Gruppo', cursive;
+
+    font-family: 'Julius Sans One', sans-serif;
+
+    font-family: 'Playfair Display SC', serif;
+
+    font-family: 'Press Start 2P', cursive;
+
+    font-family: 'Zilla Slab', serif;
+*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow: hidden; 
+
+  line-height: 1;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+.app-div {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- NAV --- */
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.nav-home, .nav-typing, .nav-numguess, .nav-tiledgen {
+/*  background-color: aqua; */
+  text-align: center;
+  height: 16%;
+  min-height: 80px;
+  padding: 0;
+  z-index: 20;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.nav-home {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-typing {
+  width: 90%;
+  height: 12%;
+  margin-left: 5%;
+  margin-top: 2%;
+  background-color: rgb(155, 141, 125);
+  box-shadow: 6px 10px #777777;
+  position: absolute;
+}
+
+.nav-numguess {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-tiledgen {
+
+/*  border-left: solid white 8px;
+  border-top: solid white 8px;
+  border-right: solid rgb(24, 24, 24) 8px;
+  border-bottom: solid rgb(24, 24, 24) 8px; */
+
+  background-color: rgb(146, 146, 146);
+}
+
+.nav-btn-home, .nav-btn-typing, .nav-btn-numguess, .nav-btn-tiledgen {
+    margin: 1%;
+    width: 22%;
+    height: 80%;
+    font-size: calc(0.5rem + 1.8vw);
+    letter-spacing: 12px;
+    font-family: inherit;
+}
+
+.nav-btn-home {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bold;
+  font-size: calc(0.5rem + 1.6vw);
+  color: black;
+  background-color: white;
+  vertical-align: middle;
+/*  transition: background-color 1s, font-size 0.2s; */
+  transition: 0.2s;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-btn-home:hover {
+  font-size: calc(0.7rem + 2.0vw);
+/*  background-color: rgba(73, 73, 73, 0.5); */
+  vertical-align: middle;
+  border: none;
+  outline: none;
+}
+
+.nav-btn-home:active {
+  font-size: calc(0.8rem + 2.4vw);
+}
+
+
+.nav-btn-numguess {
+  font-family: 'Gruppo', cursive;
+  font-size: calc(0.5rem + 1.6vw);
+  font-weight: bold;
+
+  border: none;
+
+  letter-spacing: 16px;
+  letter-spacing: calc(0.4rem + 0.8vw);
+
+  transition: 0.6s;
+  background-color: rgba(33, 22, 95, 1);
+  color: rgb(7, 0, 37);
+  outline: none;
+
+  vertical-align: middle;
+
+}
+
+.nav-btn-numguess:hover {
+  letter-spacing: 2px;
+  font-size: 24px;
+  opacity: 1;
+  background-color: #481c50;
+  color: black;
+}
+
+.nav-btn-numguess:active {
+  font-size: calc(0.5rem + 1.6vw);
+  letter-spacing: calc(0.5rem + 1.1vw);
+}
+
+
+.nav-btn-typing {
+  font-size: calc(0.8rem + 1.4vw);
+  font-family: 'Zilla Slab', serif;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  border: none;
+  vertical-align: middle;
+  transition: 0.3s;
+}
+
+.nav-btn-typing:hover {
+  font-size: calc(1.3rem + 1.6vw);
+  text-shadow: 2px 5px #272727;
+}
+
+.nav-btn-typing:active {
+  font-size: calc(1.3rem + 2vw);
+  text-shadow: 3px 6px #272727;
+}
+
+.nav-btn-tiledgen {
+  border-left: solid white 6px;
+  border-top: solid white 6px;
+  border-right: solid rgb(24, 24, 24) 6px;
+  border-bottom: solid rgb(24, 24, 24) 6px;
+
+  background-color: rgb(190, 190, 190);
+
+  font-size: calc(0.1rem + 2vw);
+
+  margin: 0;
+  width: 25%;
+  height: 100%;
+  
+  vertical-align: middle;
+  font-family: 'Press Start 2P', cursive;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.nav-btn-tiledgen:hover {
+  color: white;
+  font-size: calc(0.2rem + 2.2vw);
+/*  -webkit-text-stroke: 1px black; */
+}
+
+.nav-btn-tiledgen:active {
+  border-left: solid rgb(48, 48, 48) 8px;
+  border-top: solid rgb(48, 48, 48)  8px;
+  background-color: rgb(133, 133, 133);
+  border-right: none;
+  border-bottom: none;
+
+  font-size: calc(0.1rem + 1.6vw);
+
+  color: white;
+
+}
+
+.transition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  pointer-events: none;
+  background-color: rgba(90, 0, 0, 0);
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- */
+/* --------------------------------------------------------------------------------------------------------------- */
+
+.home-div {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  z-index: 3;
+  pointer-events: none;
+  background-color: rgba(90, 0, 0, 0);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* --- TYPING --- TYPING --- TYPING --- TYPING --- TYPING --- TYPING --- TYPING --- TYPING --- TYPING --- TYPING --- */
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+.typing-game-div {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(189, 184, 179);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Zilla Slab', serif;
+}
+
+.typing-game-box {
+  width: 72%;
+  height: 64%;
+  background-color: rgb(155, 141, 125);
+  text-align: center;
+  min-width: 420px;
+  min-height: 420px;
+/*  box-shadow: 5px 10px #888888; */
+  box-shadow: 6px 10px #777777;
+  margin-top: 12%;
+
+}
+
+.typing-game-menu {
+  width: 100%;
+  height: 100%;
+}
+
+.typing-game-canvas {
+  pointer-events: none;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+}
+
+.typing-game-btn, .typing-game-btn-menu {
+  margin-top: 1%;
+  font-size: calc(32px + 0.4vw);
+  font-size: calc(32px + calc(calc(0.5vw * 0.5vh) / 2));
+  font-family: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  border: none;
+  vertical-align: middle;
+}
+
+.typing-game-btn-menu {
+  margin-top: 4%;
+}
+
+.typing-game-btn:hover, .typing-game-btn-menu:hover {
+/*  text-decoration: underline;
+  text-decoration-thickness: 2px; */
+  font-style: italic;
+}
+
+.standard-explanation-char, .seeded-explanation-char, .frenzy-explanation-char {
+  font-size: calc(20px + 0.7vw);
+  color: rgb(27, 27, 27);
+}
+
+
+.hide {
+  display: none;
+}
+
+.typing-game-start-text {
+  margin-top: 5%;
+  font-size: 32px;
+  opacity: 100%;
+  transition: 1.2s;
+  letter-spacing: 2px;
+}
+
+.typing-game-start-text-hidden {
+  opacity: 0%;
+  letter-spacing: 16px;
+  white-space: nowrap;
+}
+
+.about-char {
+  font-size: calc(0.9rem + 1.2vw);
+}
+
+.about-paragraph {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.typing-game-text-div {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.typing-game-text-char {
+  color: rgb(54, 47, 15);
+  font-size: calc(0.9rem + 1.2vw);
+}
+
+.current-char {
+  text-decoration: underline greenyellow;
+}
+
+.correct-char {
+  color: black;
+}
+
+.incorrect-char {
+  color: red;
+  font-weight: 500;
+}
+
+.incorrect-char-space {
+  text-decoration: underline red;
+}
+
+.typing-game-btn-seed-clicked {
+  color: rgb(23, 59, 17);
+}
+
+/* MAYBE: invis text selection for typing game bc initially invisble chars n shit */
+::-moz-selection { /* Code for Firefox */
+  color: red;
+  background: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  color: red;
+  background: rgba(0, 0, 0, 0);
+}
+
+.typing-fail {
+  margin-top: 8px;
+  color: #3f1717;
+}
+
+.typing-succ {
+  margin-top: 8px;
+  color: rgb(23, 59, 17);
+}
+
+.typing-game-result-div {
+  margin-top: 4%;
+}
+
+.typing-game-result-header {
+  font-size: calc(1rem + 1.2vw);
+  margin-bottom: 2%;
+}
+
+.typing-game-result-stats {
+  font-size: calc(0.7rem + calc(calc(1.2vw * 1.2vh) / 2));
+}
+
+.typing-game-data-div {
+  height: 100%;
+  width: 100%;
+}
+
+.typing-game-data-entries-div {
+  height: 75%;
+}
+
+.typing-game-seeds-entry, .typing-game-data-entry {
+  font-size: calc(0.8rem + 0.4vw + 0.4vh);
+  transition: 0.3s;
+  line-height: 1.3;
+  margin-top: 3%;
+}
+
+.typing-game-seeds-entry:hover {
+  background-color: rgb(95, 89, 34);
+  cursor: pointer;
+}
+
+.typing-game-arrow {
+  margin-left: 4%;
+  margin-right: 4%;
+  font-weight: bold;
+}
+
+.grey {
+  color: rgb(43, 43, 43);
+}
+
+.grey:hover {
+  font-style: normal;
+}
+
+.typing-game-cycle-buttons {
+  height: 25%;
+  width: 100%;
+}
+
+.typing-game-input-element {
+  position: absolute;
+  z-index: -200;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* --- TILEDGEN --- TILEDGEN --- TILEDGEN --- TILEDGEN --- TILEDGEN --- TILEDGEN --- TILEDGEN --- TILEDGEN --- TILEDGEN --- */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* .tiledgen-root {
+  width: 100%;
+  height: 100%;
+} */
+
+.tiledgen-div {
+  width: 100vw;
+  height: 100vh;
+/*  height: calc(100vw * 0.84); */
+
+  position: relative;
+
+  border-left: solid white 8px;
+  border-top: solid white 8px;
+  border-right: solid rgb(24, 24, 24) 8px;
+  border-bottom: solid rgb(24, 24, 24) 8px;
+
+  background-color: rgb(146, 146, 146);
+
+  font-family: 'Press Start 2P', cursive;
+}
+
+.tiledgen-div input {
+  border-right: solid white 4px;
+  border-bottom: solid white 4px;
+  border-left: solid rgb(24, 24, 24) 4px;
+  border-top: solid rgb(24, 24, 24) 4px;
+  background-color: rgb(145, 145, 145);
+  outline: none;
+}
+
+.tiledgen-input-num {
+  font-size: calc(0.8rem + 2.2vw);
+  text-align: center;
+}
+
+
+/*
+.tiledgen-box {
+
+  border-left: solid white 8px;
+  border-top: solid white 8px;
+  border-right: solid rgb(24, 24, 24) 8px;
+  border-bottom: solid rgb(24, 24, 24) 8px;
+
+  background-color: rgb(190, 190, 190);
+
+
+  font-size: 16px;
+
+  width: 32%;
+  height: 70%;
+
+  text-align: center;
+  min-width: 420px;
+  min-height: 340px; 
+
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  transition: transform 2s, width 1.5s, height 1.5s; 
+}  */
+
+.tiledgen-box {
+
+  /*  font-size: calc(1.5rem + 2vw); */
+  
+    border-left: solid white 8px;
+    border-top: solid white 8px;
+    border-right: solid rgb(24, 24, 24) 8px;
+    border-bottom: solid rgb(24, 24, 24) 8px;
+  
+    background-color: rgb(190, 190, 190);
+  
+  /*  font-size: calc(0.5rem + 1.2vw); */
+    font-size: 16px;
+  
+    width: 90%;
+    height: 70%;
+  
+    text-align: center;
+    min-width: 420px;
+    min-height: 340px; 
+  
+    position: absolute;
+    top: 6%;
+    left: 5%;
+
+  
+    transition: transform 2s, width 1.5s, height 1.5s; 
+  }
+
+.tiledgen-btn, .tiledgen-btn-about, .tiledgen-btn-main, .tiledgen-color-btn {
+  border-left: solid white 6px;
+  border-top: solid white 6px;
+  border-right: solid rgb(24, 24, 24) 6px;
+  border-bottom: solid rgb(24, 24, 24) 6px;
+  width: 90%;
+
+  background-color: rgb(190, 190, 190);
+  outline: none;
+  font-family: inherit;
+  font-size: calc(0.8rem + 0.9vw);
+  line-height: calc(1.2rem + 2vw);
+
+  transition: 0.4s;
+}
+
+
+.tiledgen-btn:hover, .tiledgen-btn-about:hover, .tiledgen-btn-main:hover, .tiledgen-color-btn:hover {
+  color: white;
+  font-weight: bold;
+/*  -webkit-text-stroke: 1px black; */
+}
+
+.tiledgen-btn:active, .tiledgen-btn-about:active, .tiledgen-btn-main:active, .tiledgen-color-btn:active {
+  border-left: solid rgb(48, 48, 48) 8px;
+  border-top: solid rgb(48, 48, 48)  8px;
+  background-color: rgb(133, 133, 133);
+  border-right: none;
+  border-bottom: none;
+
+  font-size: calc(0.6rem + 0.7vw);
+  font-weight: normal;
+
+  color: white;
+}
+
+.tiledgen-main-menu {
+  width: 100%;
+  height: 100%;
+}
+
+.tiledgen-btn-main {
+  width: 90%;
+  height: 20%;
+  margin: 5%;
+  font-size: calc(0.9rem + 1.7vw);
+  line-height: calc(0.8rem + 3vw + 3vh);
+}
+
+.tiledgen-btn-main:active {
+  font-size: calc(0.7rem + 1.5vw);
+}
+
+.tiledgen-box-step2 {
+/* transform: translate(-200%, 0); */
+/*  transform: translate(calc(-8vw - 120%), 0); */
+width: 16%;
+}
+
+
+.tile-width-text {
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.tile-height-text {
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.tile-dimensions-input {
+/*  width: calc(2.5rem + 8vw);
+  height: calc(2.5rem + 8vw); */
+  width: calc(1.5rem + 4vw);
+  height: calc(1.5rem + 4vw);
+  margin-top: 2%;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.tiledgen-reference-canvases-div {
+position: static;
+}
+
+.tiledgen-reference-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tiledgen-color-table {
+  overflow: hidden;
+}
+
+.tiledgen-color-input {
+  width: 2.4em;
+  height: 2.4em;
+}
+
+.tiledgen-color-btn {
+  margin-bottom: 0;
+  margin-top: 6%;
+}
+
+.tiledgen-about {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 2%;
+  line-height: calc(0.4rem + 0.9vw);
+}
+
+.tiledgen-about-header {
+  font-size: calc(0.5rem + 0.9vw);
+}
+
+.tiledgen-about-char {
+  font-size: calc(0.4rem + 0.5vw);
+}
+
+.tiledgen-about-link {
+  color: blue;
+  text-decoration: none;
+  font-size: calc(0.4rem + 0.5vw);
+}
+
+.tiledgen-about-link:hover {
+  text-decoration: underline blue 2px;
+}
+
+.tiledgen-about-link:visited {
+  color: blue;
+}
+
+.tiledgen-btn-about {
+  margin-top: 2%;
+  font-size: calc(0.8rem + 0.9vw);
+  line-height: calc(1.2rem + 2vw);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* --- NUMGUESS --- NUMGUESS --- NUMGUESS --- NUMGUESS --- NUMGUESS --- NUMGUESS --- NUMGUESS --- NUMGUESS --- NUMGUESS --- */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+.numguess-main-div {
+  background-color: aqua;
+  width: 100%;
+  height: 100%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Gruppo', cursive;
+}
+
+.numguess-background, .home-background {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.numguess-foreground, .home-foreground {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
+
+.numguess-ui-container {
+  background-color: brown;
+  width: 40%;
+  height: 64%;
+  position: absolute;
+  min-width: 384px;
+  top: 24%;
+  left: calc(50% - (40% / 2)); 
+/*  left: calc(50% - (var(--variable-width)/ 2)); */
+  z-index: 3;
+/*  transition: width 1.5s, transform 1.5s; */
+text-align: center;
+font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .numguess-ui-container {
+    width: 384px;
+    height: 64%;
+    left: calc(50% - (400px / 2));
+  }
+}
+
+
+ .numguess-btn {
+  width: 100%;
+  height: 25%;
+  font-size: 18px;
+  font-weight: bold;
+
+  border: none;
+  letter-spacing: 4px;
+  transition: 0.6s;
+  background-color: rgba(33, 22, 95, 0.7);
+/*  color: rgb(7, 0, 37); */
+  color: black;
+  font-family: inherit;
+}
+
+.numguess-btn:hover {
+  letter-spacing: 28px;
+  font-size: 30px;
+  opacity: 1;
+  background-color: rgba(33, 22, 95, 1);
+  color: black;
+  padding-left: 6%;
+}
+
+.numguess-input-header {
+  width: 100%;
+  height: 25%;
+  background-color: rgba(33, 22, 95, 0.7);
+}
+
+.numguess-input-field {
+  width: 99%;
+  height: 49.6%;
+  border: none;
+  background-color: #481c50;
+  text-align: center;
+  font-size: calc(5rem + calc(calc(15vw + 15vh) / 2));
+}
+
+.numguess-btn:focus, .numguess-input-field:focus, .numguess-btn-result-inactive:focus {
+  outline: none;
+}
+
+.numguess-input-field::-webkit-outer-spin-button,
+.numguess-input-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.numguess-header-div {
+  width: 100%;
+  height: 25%;
+  font-size: 32px;
+  background-color: #481c50;
+  text-align: center;
+}
+
+.numguess-header {
+  padding-top: 10%;
+}
+
+.numguess-btn-result-inactive {
+  width: 100%;
+  height: 25%;
+  font-size: 18px;
+
+  border: none;
+  letter-spacing: 4px;
+  transition: 0.6s;
+  background-color: rgba(33, 22, 95, 0.7);
+  color: rgba(0, 0, 0, 0);
+
+  transition: 3.5s;
+}
+
+.numguess-result-number {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  background-color: #481c50;
+  font-size: 256px;
+/*  font-size: calc(4rem + 18vw); */
+  font-size: calc(5rem + calc(calc(15vw + 15vh) / 2));
+}
+
+.numguess-succ {
+  text-shadow: 1px 1px rgb(95, 158, 0);
+}
+
+.numguess-fail {
+  text-shadow: 1px 1px rgb(77, 0, 0);
+}
+
+.numguess-succ-fat {
+  text-shadow: 3px 3px rgb(95, 158, 0);
+}
+
+.numguess-fail-fat {
+  text-shadow: 3px 3px rgb(77, 0, 0);
+}
+
+.numguess-stats-div {
+  width: 100%;
+  height: 100%;
+}
+
+.numguess-stats-entries-div {
+  overflow: auto;
+  width: 100%;
+  height: 75%;
+  background-color: #481c50;
+/*  left: calc(50% - (65% / 2)); */
+}
+
+.numguess-stats-entries-container {
+  margin-left: 12.5%;
+  margin-top: 10%;
+  background-color: rgba(33, 22, 95, 1);
+  height: 75%;
+  width: 75%;
+  overflow: auto;
+  font-size: 24px;
+/*  border: black 1px solid; */
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.numguess-data-entry {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fat {
+  font-style: oblique;
+  color: #63003a;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #481c50; 
+  border-radius: 10px;
+} */
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #481c50; 
+  border-radius: 10px;
+  border: black 1px solid;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 6px rgba(33, 22, 95, 1); 
+}
+
+
+@-moz-document url-prefix() { 
+  .numguess-stats-entries-container {
+    scrollbar-color: rgba(33, 22, 95, 1) #481c50;
+    scrollbar-width: thin;
+  }
+}
+
+.numguess-about {
+  width: 100%;
+  height: 100%;
+}
+
+.numguess-about-header {
+  font-weight: bold;
+  font-size: calc(0.9rem + 1.7vw);
+  padding-top: 4%;
+}
+
+.numguess-about-paragraph {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.numguess-about-top-div {
+  background-color: #481c50;
+  height: 75%;
+}
+
+/* .about-char-numguess {
+  color: rgba(0, 0, 0, 0);
+  font-size: calc(0.5rem + 1.2vw);
+  pointer-events: none;
+  transition: 2.5s;
+}
+
+.about-char-numguess-show {
+  color: rgba(0, 0, 0, 1);
+} */
+
+.numguess-about-paragraph {
+  color: rgba(0, 0, 0, 0);
+/*  font-size: calc(0.4rem + calc(calc(1.3vw + 1.3vh) / 2)); */
+  font-size: calc(0.3rem + calc(calc(1.9vw + 1.9vh) / 2));
+  pointer-events: none;
+  transition: color 5s ease, font-size 0.1s;
+
+}
+
+.numguess-about-paragraph-show {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* .numguess-result-number-temp {
+
+  background-color: #481c50;
+  transition: 0.2s;
+}
+
+.numguess-result-number-succ {
+  background-color: green;
+}
+
+.numguess-result-number-fail {
+  background-color: red;
+} */
+
+
+.hidden {
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  pointer-events: none;
+}
