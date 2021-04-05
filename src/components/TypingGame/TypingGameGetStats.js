@@ -3,6 +3,41 @@ import getByKey from "../getByKey"
 
 function TypingGameGetStats() {
 
+    if(localStorage.getItem("typing") === null) { return {
+        totalPlayed: 0,
+        avgWpM: 0,
+        avgCpM: 0,
+        highestWpM: 0,
+        highestCpM: 0,
+        avgTimePerChar: 0,
+
+        totalStandard: 0,
+        totalSeeded: 0,
+        totalFrenzy: 0,
+
+        totalStandardEasy: 0,
+        totalStandardMedium: 0,
+        totalStandardHard: 0,
+        avgTimeStandardEasy: 0,
+        avgTimeStandardMedium: 0,
+        avgTimeStandardHard: 0,
+
+        totalSeededEasy: 0,
+        totalSeededMedium: 0,
+        totalSeededHard: 0,
+
+        totalFrenzyEasy: 0,
+        totalFrenzyMedium: 0,
+        totalFrenzyHard: 0,
+        avgLoopsEasy: 0,
+        avgLoopsMedium: 0,
+        avgLoopsHard: 0,
+        mostLoopsEasy: 0,
+        mostLoopsMedium: 0,
+        mostLoopsHard: 0,
+        }
+    }
+
     const localStorageInfo = JSON.parse(localStorage.getItem("typing"));
 
     const allStandardObjects = getByValue(localStorageInfo, "mode", "Standard", false);
@@ -62,7 +97,6 @@ function TypingGameGetStats() {
         mostLoopsEasy: getHighest(getByKey(getByValue(allFrenzyObjects, "difficulty", "Easy", false), "frenzyLoops")),
         mostLoopsMedium: getHighest(getByKey(getByValue(allFrenzyObjects, "difficulty", "Medium", false), "frenzyLoops")),
         mostLoopsHard: getHighest(getByKey(getByValue(allFrenzyObjects, "difficulty", "Hard", false), "frenzyLoops")),
-
     }
 
     return statsObj;
