@@ -1,13 +1,15 @@
 import { useState, useEffect, useRef } from "react"
 import { useHistory } from "react-router-dom"
 
+import Transition from "./Transition"
+
 function Nav() {
 
     const pageHistory = useHistory();
     const [transitionOngoing, setTransitionBool] = useState(false);
     const [navClass, setNavClass] = useState();
     const [navButtonClass, setNavButtonClass] = useState();
-    const transitionElement = document.getElementById("transition");
+
     
     useEffect(() => {
         setClasses();
@@ -18,16 +20,11 @@ function Nav() {
         if(transitionOngoing) { return };
 
         setTransitionBool(true);
-        transitionElement.classList.add("show");
   
         setTimeout(() => { 
             pageHistory.push(path);
             setClasses();            
-        }, 1600);
-
-        setTimeout(() => { 
-            transitionElement.classList.remove("show");
-        }, 1900);
+        }, 1500);
 
         setTimeout(() =>{
             setTransitionBool(false);
@@ -53,6 +50,7 @@ function Nav() {
                 <button className={navButtonClass} onClick={() => {handleClick("/typing")}}>Type</button>
                 <button className={navButtonClass} onClick={() => {handleClick("/tiledgen")}}>Gen</button>
             </div>
+            <Transition />
         </>
     )
 }

@@ -211,7 +211,12 @@ body {
   left: 0;
   z-index: 99;
   pointer-events: none;
-  background-color: rgba(90, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  transition: 1.3s ease;
+}
+
+.show {
+  background-color: aqua;
 }
 
 /* --------------------------------------------------------------------------------------------------------------- */

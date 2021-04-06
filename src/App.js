@@ -2,6 +2,7 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react"
 
 import Nav from "./components/Nav"
+import Transition from "./components/Transition"
 
 import HomeRoot from "./components/Home/HomeRoot"
 import NumGuessRoot from "./components/NumGuess/NumGuessRoot"
@@ -24,6 +25,7 @@ function App() {
   return (
       <div className="app-div">
         <Nav />
+        <Transition />
           <div className="container">
               <Switch>
                 <Route exact path="/home">
